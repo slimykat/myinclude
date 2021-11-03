@@ -1,0 +1,19 @@
+{
+    "links": [
+        {
+            "source": "deviceA",
+            "target": "deviceB",
+            "value": "10"
+        }
+    ],
+    "nodes": [
+        {
+            "group": "1",
+            "id": "deviceA"
+        },
+        {
+            "group": "2",
+            "id": "deviceB"
+        }
+    ]
+}
