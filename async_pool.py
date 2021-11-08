@@ -149,4 +149,24 @@ class worker_pool(object):
 		print runtime
 	"""
 
+## functions for debugging
+async def _f():
+    asyncio.sleep(1)
+    print('.',end=" ")
+
+def _iter(n):
+    for _ in range(n):
+            yield _f()
+    print(" ")
+    
+async def _test(num=0):
+	Q = asyncio.Queue(num)
+	for i in range(10):
+		await Q.put(i)
+	print("done")
+	for i in range(10):
+		print(await Q.get())
+		Q.task_done()
+	await Q.join()
+
 

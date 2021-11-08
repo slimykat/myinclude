@@ -1,8 +1,6 @@
 #from numpy.core.einsumfunc import einsum
 import mysql.connector
 from mysql.connector import Error
-import datetime
-import numpy as np
 import logging
 
 
